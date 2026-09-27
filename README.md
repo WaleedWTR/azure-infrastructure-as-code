@@ -1,5 +1,7 @@
 # Azure Infrastructure as Code
 
+![Bicep validation](https://github.com/WaleedWTR/azure-infrastructure-as-code/actions/workflows/bicep.yml/badge.svg)
+
 A modular Azure Bicep portfolio project demonstrating repeatable deployment of a small, governed cloud foundation.
 
 > **Portfolio note:** This is a public lab implementation. Names, data and configuration are generic and contain no employer-specific material.
