@@ -54,6 +54,14 @@ az deployment group create \
 - no secrets in source control
 - reusable modules rather than copied resources
 
+## Documentation
+
+- [Architecture and design decisions](docs/architecture.md)
+- [Deployment runbook](docs/deployment-runbook.md)
+- [Security baseline](docs/security-baseline.md)
+- [Cost considerations](docs/cost-considerations.md)
+- [Technical references](docs/references.md)
+
 ## Skills demonstrated
 
 **Azure · Bicep · Infrastructure as Code · Networking · Governance · Security · GitHub Actions**
