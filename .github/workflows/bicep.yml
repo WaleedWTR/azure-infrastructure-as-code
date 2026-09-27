@@ -1,0 +1,23 @@
+name: Bicep validation
+
+on:
+  push:
+    paths:
+      - "**/*.bicep"
+      - "**/*.bicepparam"
+      - ".github/workflows/bicep.yml"
+  pull_request:
+    paths:
+      - "**/*.bicep"
+      - "**/*.bicepparam"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Bicep
+        uses: azure/cli@v2
+        with:
+          inlineScript: |
+            az bicep build --file main.bicep
