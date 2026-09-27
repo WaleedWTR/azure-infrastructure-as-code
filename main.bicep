@@ -25,7 +25,7 @@ module monitoring './modules/log-analytics.bicep' = {
 }
 
 resource storage 'Microsoft.Storage/storageAccounts@2025-01-01' = {
-  name: take(uniqueString(resourceGroup().id, prefix), 20)
+  name: 'st\${uniqueString(resourceGroup().id, prefix)}'
   location: location
   sku: {
     name: 'Standard_LRS'
@@ -33,10 +33,10 @@ resource storage 'Microsoft.Storage/storageAccounts@2025-01-01' = {
   kind: 'StorageV2'
   properties: {
     allowBlobPublicAccess: false
-    allowSharedKeyAccess: false
+    allowSharedKeyAccess: false\n    allowCrossTenantReplication: false\n    defaultToOAuthAuthentication: true
     minimumTlsVersion: 'TLS1_2'
     supportsHttpsTrafficOnly: true
-    publicNetworkAccess: 'Enabled'
+    publicNetworkAccess: 'Disabled'
   }
 }
 
